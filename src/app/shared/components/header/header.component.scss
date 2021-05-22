@@ -1,0 +1,15 @@
+span.spacer {
+    flex: 1 1 auto;
+    display: flex;
+
+    & > a {
+        display: flex;
+
+        & > svg {
+            fill: #673ab3;
+            background-color: #ffffff;
+            width: 12rem;
+            height: 3rem;
+        }
+    }
+}
