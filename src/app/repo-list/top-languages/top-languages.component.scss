@@ -1,0 +1,8 @@
+div.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    app-language-tag {
+        margin-right: 15px;
+    }
+}

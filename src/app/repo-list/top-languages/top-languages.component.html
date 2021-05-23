@@ -1,0 +1,8 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Top languages</mat-card-title>
+    </mat-card-header>
+    <div class="wrapper">
+        <app-language-tag *ngFor="let lang of langs" [lang]="lang"></app-language-tag>
+    </div>
+</mat-card>

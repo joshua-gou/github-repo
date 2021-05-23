@@ -1,0 +1,14 @@
+div.wrapper {
+    display: flex;
+    align-items: center;
+
+    > * {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+
+        span.des {
+            margin-left: 5px;
+        }
+    }
+}

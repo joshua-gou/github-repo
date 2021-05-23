@@ -2,14 +2,22 @@ span.spacer {
     flex: 1 1 auto;
     display: flex;
 
-    & > a {
+    a {
         display: flex;
 
-        & > svg {
+        svg {
             fill: #673ab3;
             background-color: #ffffff;
             width: 12rem;
             height: 3rem;
         }
     }
+}
+
+mat-icon.prefix {
+    margin-right: 20px;
+}
+
+mat-form-field.need-spacer {
+    margin-right: 40px;
 }

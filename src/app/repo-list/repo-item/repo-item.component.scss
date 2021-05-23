@@ -1,0 +1,27 @@
+div.header {
+    > a {
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    > p.subtitle {
+        margin-top: 5px;
+        font-size: 14px;
+        color: darkgrey;
+    }
+}
+
+div.wrapper {
+    padding: 20px 0;
+
+    mat-chip {
+        font-size: 12px;
+    }
+
+    app-bottom-bar {
+        display: block;
+        margin: 20px 10px 0 0;
+        font-size: 12px;
+    }
+}

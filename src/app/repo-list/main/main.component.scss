@@ -1,0 +1,22 @@
+div.wrapper {
+    width: 80%;
+    margin: 20px auto 0;
+    display: flex;
+
+    mat-list {
+        flex: 1 1 auto;
+
+        mat-list-item {
+            height: auto;
+        }
+    }
+
+    div.sidePanel {
+        display: flex;
+        flex-flow: column nowrap;
+
+        > * {
+            margin: 20px 20px 0 50px;
+        }
+    }
+}

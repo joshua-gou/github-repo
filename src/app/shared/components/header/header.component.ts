@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  fgFilter!: FormGroup;
+
+  constructor(
+    private _fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.fgFilter = this._fb.group({
+      search: [''],
+      type: [''],
+      lang: [''],
+      sort: ['']
+    });
   }
 
 }

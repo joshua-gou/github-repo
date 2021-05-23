@@ -26,4 +26,33 @@
             </a>
         </span>
     </mat-toolbar-row>
+    <mat-toolbar-row>
+        <span class="spacer"></span>
+        <form [formGroup]="fgFilter">
+            <mat-form-field appearance="outline" class="need-spacer">
+                <mat-label>Find a repository...</mat-label>
+                <input matInput type="text" placeholder="Angular" formControlName="search">
+                <mat-icon matPrefix class="prefix">search</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="need-spacer">
+                <mat-label>Type</mat-label>
+                <mat-select>
+                    <mat-option></mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="need-spacer">
+                <mat-label>Language</mat-label>
+                <mat-select>
+                    <mat-option></mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Sort By</mat-label>
+                <mat-select>
+                    <mat-option></mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+        <span class="spacer"></span>
+    </mat-toolbar-row>
 </mat-toolbar>
