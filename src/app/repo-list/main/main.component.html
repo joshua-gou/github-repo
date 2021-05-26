@@ -1,28 +1,18 @@
 <div class="wrapper">
     <mat-list>
-        <mat-list-item>
-            <app-repo-item></app-repo-item>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <app-repo-item></app-repo-item>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <app-repo-item></app-repo-item>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <app-repo-item></app-repo-item>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <app-repo-item></app-repo-item>
-        </mat-list-item>
+        <ng-container *ngFor="let repo of repos">
+            <mat-list-item>
+                <app-repo-item [repo]="repo"></app-repo-item>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </ng-container>
     </mat-list>
     <div class="sidePanel">
-        <app-top-languages></app-top-languages>
-        <app-most-used-topics></app-most-used-topics>
-        <app-people></app-people>
+        <app-top-languages [langs]="topLangs"></app-top-languages>
+        <app-most-used-topics [topics]="mostUsedTopics"></app-most-used-topics>
+        <app-people [members]="members"></app-people>
+    </div>
+    <div class="overlay" [ngClass]="{hidden: isDataLoaded}">
+        <mat-spinner diameter="40"></mat-spinner>
     </div>
 </div>

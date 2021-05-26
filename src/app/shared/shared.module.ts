@@ -11,15 +11,17 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
-import { HeaderComponent } from './components/header/header.component';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { LanguageTagComponent } from './components/language-tag/language-tag.component';
+import { LastUpdatePipe } from './pipes/last-update.pipe';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    LanguageTagComponent
+    LanguageTagComponent,
+    LastUpdatePipe
   ],
   imports: [
     CommonModule,
@@ -35,6 +37,8 @@ import { LanguageTagComponent } from './components/language-tag/language-tag.com
     MatSelectModule,
     MatChipsModule,
     MatDividerModule,
+    MatProgressSpinnerModule,
+    InlineSVGModule,
   ],
   exports: [
     CommonModule,
@@ -50,9 +54,12 @@ import { LanguageTagComponent } from './components/language-tag/language-tag.com
     MatSelectModule,
     MatChipsModule,
     MatDividerModule,
+    MatProgressSpinnerModule,
+    InlineSVGModule,
 
-    HeaderComponent,
     LanguageTagComponent,
+
+    LastUpdatePipe,
   ]
 })
 export class SharedModule { }

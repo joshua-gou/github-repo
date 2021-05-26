@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { RepoItem } from 'src/app/shared';
+import { ENV_TOKEN, IEnvironment } from 'src/environments';
 
 @Component({
   selector: 'app-repo-item',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() repo!: RepoItem;
+
+  constructor(
+    @Inject(ENV_TOKEN) public env: IEnvironment
+  ) { }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Language } from 'src/app/shared';
+import { ENV_TOKEN, IEnvironment } from 'src/environments';
 
 @Component({
   selector: 'app-top-languages',
@@ -8,18 +9,13 @@ import { Language } from 'src/app/shared';
 })
 export class TopLanguagesComponent implements OnInit {
 
-  langs!: Language[];
+  @Input() langs!: Language[];
 
-  constructor() { }
+  constructor(
+    @Inject(ENV_TOKEN) public env: IEnvironment
+  ) { }
 
   ngOnInit(): void {
-    this.langs = [
-      Language.TypeScript,
-      Language.Kotlin,
-      Language.Shell,
-      Language.Python,
-      Language.Ruby
-    ];
   }
 
 }

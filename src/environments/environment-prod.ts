@@ -1,12 +1,8 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
 import { IEnvironment } from "./environment.interface";
 
 export const environment: IEnvironment = {
-  production: false,
-  name: 'dev',
+  production: true,
+  name: 'prod',
   urlReposList: 'https://api.github.com/users/decathlon/repos',
   urlMembersList: 'https://api.github.com/orgs/decathlon/members',
   urlPrefix: 'https://github.com/Decathlon/',
@@ -22,12 +18,3 @@ export const environment: IEnvironment = {
 
   authToken: 'token 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',
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

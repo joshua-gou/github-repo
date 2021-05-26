@@ -7,6 +7,17 @@ div.wrapper {
         display: flex;
         align-items: center;
 
+        &.forks,
+        &.stars,
+        &.issues,
+        &.pulls {
+            a {
+                display: flex;
+                align-items: center;
+                color: rgba($color: #000000, $alpha: 0.87);
+                text-decoration: none;
+            }
+        }
         span.des {
             margin-left: 5px;
         }

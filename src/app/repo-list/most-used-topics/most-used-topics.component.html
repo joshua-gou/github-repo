@@ -3,8 +3,8 @@
         <mat-card-title>Most used topics</mat-card-title>
     </mat-card-header>
     <mat-chip-list>
-        <mat-chip color="primary" selected>Angular</mat-chip>
-        <mat-chip color="primary" selected>Angular</mat-chip>
-        <mat-chip color="primary" selected>Angular</mat-chip>
+        <a *ngFor="let topic of topics" [href]="env.urlTopicPrefix + topic + env.urlTopicSuffix">
+            <mat-chip color="primary" selected>{{topic}}</mat-chip>
+        </a>
     </mat-chip-list>
 </mat-card>

@@ -2,7 +2,8 @@ div.wrapper {
     display: flex;
     flex-flow: row wrap;
 
-    app-language-tag {
+    a {
         margin-right: 15px;
+        text-decoration: none;
     }
 }

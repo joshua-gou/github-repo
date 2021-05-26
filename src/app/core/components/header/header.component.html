@@ -31,25 +31,26 @@
         <form [formGroup]="fgFilter">
             <mat-form-field appearance="outline" class="need-spacer">
                 <mat-label>Find a repository...</mat-label>
-                <input matInput type="text" placeholder="Angular" formControlName="search">
+                <input matInput type="text" placeholder="Angular" formControlName="search"
+                    (ngModelChange)="onSearch($event)">
                 <mat-icon matPrefix class="prefix">search</mat-icon>
             </mat-form-field>
             <mat-form-field appearance="outline" class="need-spacer">
                 <mat-label>Type</mat-label>
-                <mat-select>
-                    <mat-option></mat-option>
+                <mat-select formControlName="type" (selectionChange)="onRepoTypeSelected($event.value)">
+                    <mat-option *ngFor="let repoType of repoTypes" [value]="repoType">{{repoType}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline" class="need-spacer">
                 <mat-label>Language</mat-label>
-                <mat-select>
-                    <mat-option></mat-option>
+                <mat-select formControlName="lang" (selectionChange)="onLangSelected($event.value)">
+                    <mat-option *ngFor="let lang of langs" [value]="lang">{{lang}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Sort By</mat-label>
-                <mat-select>
-                    <mat-option></mat-option>
+                <mat-select formControlName="sort" (selectionChange)="onSortBySelected($event.value)">
+                    <mat-option *ngFor="let field of sortBy" [value]="field">{{field}}</mat-option>
                 </mat-select>
             </mat-form-field>
         </form>

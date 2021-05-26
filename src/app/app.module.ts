@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RepoListModule } from './repo-list';
 import { SharedModule } from './shared';
+import { CoreModule } from './core';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SharedModule } from './shared';
   imports: [
     BrowserModule,
     SharedModule,
+    CoreModule,
     RepoListModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -2,8 +2,15 @@
 export * from './shared.module';
 
 // Components
-export * from './components/header/header.component';
 
 // Common
 export * from './common/constants';
 export * from './common/enums';
+
+// Models
+export * from './models/repo-item';
+export * from './models/member';
+export * from './models/count';
+
+// Pipes
+export * from './pipes/last-update.pipe';

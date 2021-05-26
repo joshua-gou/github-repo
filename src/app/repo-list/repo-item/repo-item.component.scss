@@ -15,8 +15,35 @@ div.header {
 div.wrapper {
     padding: 20px 0;
 
-    mat-chip {
-        font-size: 12px;
+    a {
+        text-decoration: none;
+
+        mat-chip {
+            cursor: pointer;
+            font-size: 12px;
+        }
+    }
+
+    div.top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div.top-left {
+            flex: 1 1 auto;
+        }
+
+        div.top-right {
+            width: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            iframe {
+                width: 155px;
+                height: 30px;
+            }
+        }
     }
 
     app-bottom-bar {

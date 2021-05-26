@@ -10,3 +10,17 @@ export enum Language {
     PLSQL = 'PLSQL',
     Java = 'Java'
 }
+
+export enum RepoType {
+    All = 'All',
+    Sources = 'Sources',
+    Forks = 'Forks',
+    Archived = 'Archived',
+    Mirrors = 'Mirrors'
+}
+
+export enum SortBy {
+    LastUpdated = 'Last Updated',
+    Name = 'Name',
+    Stars = 'Stars'
+}
