@@ -20,7 +20,7 @@ export const environment: IEnvironment = {
   urlLangPrefix: 'https://github.com/Decathlon?language=',
   urlPeople: 'https://github.com/orgs/Decathlon/people',
 
-  authToken: 'token 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',
+  authToken: 'token [placeholder]',
 };
 
 /*
