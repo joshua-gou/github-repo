@@ -1,4 +1,4 @@
-# TODO List
+# Github Repo
 
 This project is to reproduce the github repo list page, with Angular.
 
